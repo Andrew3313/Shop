@@ -1,29 +1,25 @@
-import { Quicksand, Revalia, Palanquin } from "next/font/google";
-import type { Metadata } from "next";
 import "./globals.css";
+import { Quicksand, Revalia, Palanquin } from "next/font/google";
+import { cn } from "@/shared/lib/utils";
+import { Providers } from "@/shared/components";
 
 const quicksand = Quicksand({
-  subsets: ['latin'],
-  weight: ['400'], 
-  variable: '--font-quicksand', 
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-quicksand",
 });
 
 const revalia = Revalia({
-  subsets: ['latin'],
-  weight: ['400'], 
-  variable: '--font-revalia', 
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-revalia",
 });
 
 const palanquin = Palanquin({
-  subsets: ['latin'],
-  weight: ['400'], 
-  variable: '--font-palanquin', 
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-palanquin",
 });
-
-export const metadata: Metadata = {
-  title: "",
-  description: "",
-};
 
 export default function RootLayout({
   children,
@@ -32,7 +28,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${quicksand.variable} ${revalia.variable} ${palanquin.variable}`}>{children}</body>
+      <body
+        className={cn(
+          "relative bg-background min-h-screen bg-cover bg-center bg-fixed bg-no-repeat",
+          `${quicksand.variable} ${revalia.variable} ${palanquin.variable}`
+        )}
+      >
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
