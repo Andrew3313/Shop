@@ -23,7 +23,7 @@ export const Products: React.FC = async () => {
               value={`category-${category.id}`}
               className="border-none"
             >
-              <AccordionTrigger className="font-revalia text-5xl hover:no-underline p-8">
+              <AccordionTrigger className="category-name font-revalia text-5xl hover:no-underline p-8">
                 {category.name}
               </AccordionTrigger>
               <AccordionContent>

@@ -3,9 +3,11 @@
 import { Container } from "@/shared/components";
 import { useCartStore } from "@/shared/store/cart";
 import Image from "next/image";
+import { toast } from "sonner";
 
 export default function Cart() {
-  const { items, totalAmount, updateItemQuantity, removeItem, clearCart } = useCartStore();
+  const { items, totalAmount, updateItemQuantity, removeItem, clearCart } =
+    useCartStore();
 
   const handleQuantityIncrease = (id: number) => {
     updateItemQuantity(id, getItemQuantity(id) + 1);
@@ -29,7 +31,10 @@ export default function Cart() {
 
   const generateOrderMessage = () => {
     const message = items
-      .map((item) => `${item.name} x${item.quantity} - ${item.price * item.quantity} ₽`)
+      .map(
+        (item) =>
+          `${item.name} x${item.quantity} - ${item.price * item.quantity} ₽`
+      )
       .join("\n");
     return `Здравствуйте, я хочу заказать:\n${message}\n\nИтого: ${totalAmount} ₽`;
   };
@@ -39,10 +44,14 @@ export default function Cart() {
 
     clearCart();
 
+    toast("Спасибо за заказ!");
+
     const telegramUserName = "be_stay";
 
-    const telegramLink = `https://t.me/${telegramUserName}?text=${encodeURIComponent(orderMessage)}`;
-    
+    const telegramLink = `https://t.me/${telegramUserName}?text=${encodeURIComponent(
+      orderMessage
+    )}`;
+
     window.open(telegramLink, "_blank");
   };
 
@@ -58,6 +67,7 @@ export default function Cart() {
                 alt="Empty cart"
                 width={300}
                 height={300}
+                priority={true}
               />
             </div>
           ) : (

@@ -1,5 +1,8 @@
 import { Container } from "@/shared/components";
-// import Link from "next/link";
+
+export const metadata = {
+  title: "Доставка и оплата",
+};
 
 export default function Delivery() {
   return (
@@ -40,13 +43,6 @@ export default function Delivery() {
               </li>
             </ul>
           </div>
-
-          {/* <Link
-            href="/"
-            className="text-4xl transition-colors duration-300 hover:text-gray-300"
-          >
-            На главную страницу
-          </Link> */}
         </div>
       </Container>
     </div>

@@ -1,5 +1,8 @@
 import { Container } from "@/shared/components";
-// import Link from "next/link";
+
+export const metadata = {
+  title: "Контакты",
+};
 
 export default function Contacts() {
   return (
@@ -15,13 +18,6 @@ export default function Contacts() {
               Верстка — aoki
             </p>
           </div>
-
-          {/* <Link
-            href="/"
-            className="text-4xl transition-colors duration-300 hover:text-gray-300"
-          >
-            На главную страницу
-          </Link> */}
         </div>
       </Container>
     </div>

@@ -20,10 +20,11 @@ export const Header: React.FC<Props> = ({ className }) => {
             width={260}
             height={135}
             priority={true}
+            className="logo"
           />
         </Link>
 
-        <CartButton className="absolute right-[5.4rem] top-[5.4rem]" />
+        <CartButton className="cart-button absolute right-[5.4rem] top-[5.4rem]" />
       </Container>
     </header>
   );

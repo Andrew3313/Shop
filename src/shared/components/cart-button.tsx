@@ -20,7 +20,7 @@ export const CartButton: React.FC<IProps> = ({ className }) => {
       )}
       onClick={() => router.push("/cart")}
     >
-      <Image src="/assets/images/cart.svg" alt="Cart" width={27} height={27} />
+      <Image className="cart-button-image" src="/assets/images/cart.svg" alt="Cart" width={27} height={27} />
     </button>
   );
 };

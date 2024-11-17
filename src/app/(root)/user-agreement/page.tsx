@@ -1,14 +1,18 @@
 import { Container } from "@/shared/components";
 
+export const metadata = {
+  title: "Пользовательское соглашение",
+};
+
 export default function UserAgreement() {
   return (
-    <div className="min-h-[calc(100vh-27rem)]">
+    <div className="user-agreement-container min-h-[calc(100vh-27rem)]">
       <Container className="backdrop-blur-md bg-black/30 p-10 mb-[4rem] font-palanquin">
-        <h1 className="text-4xl text-center mb-10">
+        <h1 className="user-agreement-title text-4xl text-center mb-10">
           Пользовательское соглашение
         </h1>
 
-        <div className="text-justify text-3xl leading-relaxed">
+        <div className="user-agreement text-justify text-3xl leading-relaxed">
           <section className="mb-10">
             <h2 className="mb-2">1. Общие положения</h2>
             <p className="mb-2">

@@ -28,25 +28,29 @@ export const Product: React.FC<IProps> = ({ product }) => {
       price: product.price,
       imagePath: product.imagePath,
     });
-    toast.success('Товар добавлен в корзину');
+    toast.success("Товар добавлен в корзину");
   };
 
   return (
     <Card className="bg-transparent text-white border-none">
       <CardContent className="p-4">
-        <h3 className="text-3xl pl-5 select-none">{product.name}</h3>
-        <Image
-          src={product.imagePath}
-          alt={product.name}
-          className="w-full h-auto aspect-square object-cover mb-4"
-          width={400}
-          height={350}
-        />
+        <h3 className="product-name text-3xl pl-5 select-none">
+          {product.name}
+        </h3>
+        <div className="card-content">
+          <Image
+            src={product.imagePath}
+            alt={product.name}
+            className="product-image w-full h-auto aspect-square object-cover mb-4"
+            width={350}
+            height={300}
+          />
+        </div>
       </CardContent>
       <CardFooter>
         <Button
           onClick={handleAddToCart}
-          className="flex justify-between items-center w-full text-3xl p-14 border-[.1rem] border-white bg-transparent hover:bg-black/30 active:translate-y-1 transition-transform"
+          className="add-to-cart flex justify-between items-center w-full text-3xl p-14 border-[.1rem] border-white bg-transparent hover:bg-black/30 active:translate-y-1 transition-transform"
         >
           <h3>добавить в корзину</h3>
           <p>{product.price} ₽</p>
