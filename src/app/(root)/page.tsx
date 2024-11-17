@@ -1,9 +1,8 @@
-import { Container, Menu, Products } from "@/shared/components";
+import { Container, Products } from "@/shared/components";
 
 export default function Home() {
   return (
-    <Container className="relative min-h-[calc(100vh-27rem)]">
-      <Menu />
+    <Container className="relative min-h-[calc(100vh-37.5rem)]">
       <Products />
     </Container>
   );

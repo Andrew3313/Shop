@@ -1,9 +1,9 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Footer, Header } from "@/shared/components";
+import { Footer, Header, Menu } from "@/shared/components";
 
 export const metadata: Metadata = {
-  title: "Fiwnd | Главная",
+  title: "Главная",
 };
 
 export default function HomeLayout({
@@ -14,6 +14,7 @@ export default function HomeLayout({
   return (
     <>
       <Header />
+      <Menu />
       {children}
       <Footer />
     </>

@@ -3,26 +3,23 @@ import { Container } from "@/shared/components";
 export default function UserAgreement() {
   return (
     <div className="min-h-[calc(100vh-27rem)]">
-      <Container className="text-white backdrop-blur-sm bg-black/50 p-10 mb-[4rem] font-palanquin">
-        <h1 className="text-3xl font-bold text-center mb-10">
+      <Container className="backdrop-blur-md bg-black/30 p-10 mb-[4rem] font-palanquin">
+        <h1 className="text-4xl text-center mb-10">
           Пользовательское соглашение
         </h1>
 
-        <div className="text-left text-3xl leading-relaxed">
+        <div className="text-justify text-3xl leading-relaxed">
           <section className="mb-10">
             <h2 className="mb-2">1. Общие положения</h2>
             <p className="mb-2">
               <strong>1.1.</strong> Настоящее пользовательское соглашение (далее
-              – "Соглашение") регулирует использование сайта{" "}
-              <a
-                href="https://www.tlwnd.online"
-                className="underline"
-              >
+              – &quot;Соглашение&quot;) регулирует использование сайта{" "}
+              <a href="https://www.tlwnd.online" className="underline">
                 www.tlwnd.online
               </a>{" "}
-              (далее – "Сайт") и условий, при которых пользователи (далее –
-              "Пользователь") могут получать доступ к информации и услугам,
-              предоставляемым на Сайте.
+              (далее – &quot;Сайт&quot;) и условий, при которых пользователи
+              (далее – &quot;Пользователь&quot;) могут получать доступ к
+              информации и услугам, предоставляемым на Сайте.
             </p>
             <p className="mb-2">
               <strong>1.2.</strong> Используя Сайт, Пользователь подтверждает
@@ -36,7 +33,7 @@ export default function UserAgreement() {
             <h2 className="mb-2">2. Описание товаров</h2>
             <p className="mb-2">
               <strong>2.1.</strong> На Сайте представлены товары под брендом
-              TLWND, включая одежду и аксессуары (далее – "Товары").
+              TLWND, включая одежду и аксессуары (далее – &quot;Товары&quot;).
             </p>
             <p className="mb-2">
               <strong>2.2.</strong> Пользователь должен понимать, что все
@@ -53,9 +50,7 @@ export default function UserAgreement() {
           </section>
 
           <section className="mb-10">
-            <h2 className="mb-2">
-              3. Ограничение ответственности
-            </h2>
+            <h2 className="mb-2">3. Ограничение ответственности</h2>
             <p className="mb-2">
               <strong>3.1.</strong> Администрация Сайта не несет ответственности
               за любые убытки или ущерб, возникшие в результате использования
@@ -70,9 +65,7 @@ export default function UserAgreement() {
           </section>
 
           <section className="mb-10">
-            <h2 className="mb-2">
-              4. Заключительные положения
-            </h2>
+            <h2 className="mb-2">4. Заключительные положения</h2>
             <p className="mb-2">
               <strong>4.1.</strong> Администрация Сайта оставляет за собой право
               изменять условия настоящего Соглашения без предварительного
@@ -95,10 +88,7 @@ export default function UserAgreement() {
             <h2 className="mb-2">5. Контакты</h2>
             <p>
               Телеграм —{" "}
-              <a
-                href="https://t.me/exrthangel"
-                className="underline"
-              >
+              <a href="https://t.me/exrthangel" className="underline">
                 t.me/exrthangel
               </a>
             </p>

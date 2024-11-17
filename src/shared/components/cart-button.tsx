@@ -2,7 +2,7 @@
 
 import { cn } from "@/shared/lib/utils";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 interface IProps {
@@ -10,14 +10,16 @@ interface IProps {
 }
 
 export const CartButton: React.FC<IProps> = ({ className }) => {
-  const pathname = usePathname()
-
-  if (pathname === '/user-agreement') {
-    return null;
-  }
+  const router = useRouter();
 
   return (
-    <button className={cn("hover:opacity-75 transition-opacity duration-200", className)}>
+    <button
+      className={cn(
+        "hover:opacity-75 transition-opacity duration-200",
+        className
+      )}
+      onClick={() => router.push("/cart")}
+    >
       <Image src="/assets/images/cart.svg" alt="Cart" width={27} height={27} />
     </button>
   );

@@ -5,36 +5,41 @@ const prisma = new PrismaClient();
 const initialProducts = [
   {
     name: "Hat 1",
-    imagePath: "https://disk.yandex.ru/i/8dWKZr7BAlvUMQ",
+    article: 1,
+    imagePath: "https://i.imgur.com/cMj7Lns.png",
     category: "new collection",
     description: "Description 1",
     price: 1000,
   },
   {
     name: "Hat 2",
-    imagePath: "https://disk.yandex.ru/i/8dWKZr7BAlvUMQ",
+    article: 2,
+    imagePath: "https://i.imgur.com/cMj7Lns.png",
     category: "new collection",
     description: "Description 2",
     price: 1500,
   },
   {
     name: "Hat 3",
-    imagePath: "https://disk.yandex.ru/i/8dWKZr7BAlvUMQ",
+    article: 3,
+    imagePath: "https://i.imgur.com/cMj7Lns.png",
     category: "new collection",
     description: "Description 3",
     price: 2000,
   },
   {
     name: "Hat 4",
-    imagePath: "https://disk.yandex.ru/i/8dWKZr7BAlvUMQ",
-    category: "new collection",
+    article: 4,
+    imagePath: "https://i.imgur.com/cMj7Lns.png",
+    category: "loveNest collection",
     description: "Description 4",
     price: 1100,
   },
   {
     name: "Hat 5",
-    imagePath: "https://disk.yandex.ru/i/8dWKZr7BAlvUMQ",
-    category: "new collection",
+    article: 5,
+    imagePath: "https://i.imgur.com/cMj7Lns.png",
+    category: "loveNest collection",
     description: "Description 5",
     price: 900,
   },
@@ -42,12 +47,42 @@ const initialProducts = [
 
 const seed = async () => {
   await prisma.product.deleteMany();
+  await prisma.category.deleteMany();
+
+  const uniqueCategories = Array.from(
+    new Set(initialProducts.map((product) => product.category))
+  );
+
+  const categoryMap: Record<string, number> = {};
+
+  for (const categoryName of uniqueCategories) {
+    const category = await prisma.category.create({
+      data: { name: categoryName },
+    });
+    categoryMap[categoryName] = category.id;
+  }
 
   for (const product of initialProducts) {
     await prisma.product.create({
-      data: product,
+      data: {
+        name: product.name,
+        article: product.article,
+        imagePath: product.imagePath,
+        description: product.description,
+        price: product.price,
+        categoryId: categoryMap[product.category],
+      },
     });
   }
 };
 
-seed();
+seed()
+  .then(() => {
+    console.log("Seed completed successfully");
+  })
+  .catch((error) => {
+    console.error("Seed failed", error);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });
