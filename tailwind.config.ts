@@ -55,6 +55,11 @@ const config = {
       backgroundImage: {
         background: "url('/assets/images/bg.svg')",
       },
+      fontFamily: {
+        quicksand: ["var(--font-quicksand)", "sans-serif"],
+        revalia: ["var(--font-revalia)", "serif"],
+        palanquin: ["var(--font-palanquin)", "sans-serif"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -71,8 +76,8 @@ const config = {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "accordion-down": "accordion-down 0.3s ease-out",
+        "accordion-up": "accordion-up 0.3s ease-out",
       },
     },
   },

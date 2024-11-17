@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Header } from "@/shared/components";
+import { Footer, Header } from "@/shared/components";
 
 export const metadata: Metadata = {
   title: "Fiwnd | Главная",
@@ -12,9 +12,10 @@ export default function HomeLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="min-h-screen">
+    <>
       <Header />
       {children}
-    </main>
+      <Footer />
+    </>
   );
 }

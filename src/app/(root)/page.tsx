@@ -1,3 +1,10 @@
+import { Container, Menu, Products } from "@/shared/components";
+
 export default function Home() {
-  return <h1 className="text-3xl font-bold">Home</h1>;
+  return (
+    <Container className="relative min-h-[calc(100vh-27rem)]">
+      <Menu />
+      <Products />
+    </Container>
+  );
 }

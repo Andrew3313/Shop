@@ -11,9 +11,8 @@ interface Props {
 
 export const Header: React.FC<Props> = ({ className }) => {
   return (
-    <header className={cn("pt-14 text-white", className)}>
-      <Container className="flex items-center justify-center relative border-[1px] border-white border-solid">
-        {/*Центральная часть*/}
+    <header className={cn("pt-14 text-white mb-[4rem]", className)}>
+      <Container className="flex items-center justify-center backdrop-blur-sm bg-black/50 border-[.1rem] border-white">
         <Link href="/">
           <Image
             src="/logo.svg"
@@ -24,9 +23,10 @@ export const Header: React.FC<Props> = ({ className }) => {
           />
         </Link>
 
-        {/*Правая часть*/}
-        <CartButton className="absolute right-11 top-14" />
+        <CartButton className={cn("absolute right-[5.4rem] top-[5.4rem]")} />
       </Container>
     </header>
   );
 };
+
+
