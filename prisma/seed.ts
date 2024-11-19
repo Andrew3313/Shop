@@ -46,43 +46,46 @@ const initialProducts = [
 ];
 
 const seed = async () => {
-  await prisma.product.deleteMany();
-  await prisma.category.deleteMany();
+  try {
+    await prisma.product.deleteMany();
+    await prisma.category.deleteMany();
 
-  const uniqueCategories = Array.from(
-    new Set(initialProducts.map((product) => product.category))
-  );
+    console.log("Existing data cleared");
 
-  const categoryMap: Record<string, number> = {};
+    const uniqueCategories = Array.from(
+      new Set(initialProducts.map((product) => product.category))
+    );
 
-  for (const categoryName of uniqueCategories) {
-    const category = await prisma.category.create({
-      data: { name: categoryName },
-    });
-    categoryMap[categoryName] = category.id;
-  }
+    const categoryMap: Record<string, number> = {};
 
-  for (const product of initialProducts) {
-    await prisma.product.create({
-      data: {
-        name: product.name,
-        article: product.article,
-        imagePath: product.imagePath,
-        description: product.description,
-        price: product.price,
-        categoryId: categoryMap[product.category],
-      },
-    });
+    for (const categoryName of uniqueCategories) {
+      const category = await prisma.category.create({
+        data: { name: categoryName },
+      });
+      categoryMap[categoryName] = category.id;
+    }
+
+    console.log("Categories created", categoryMap);
+
+    for (const product of initialProducts) {
+      await prisma.product.create({
+        data: {
+          name: product.name,
+          article: product.article,
+          imagePath: product.imagePath,
+          description: product.description,
+          price: product.price,
+          categoryId: categoryMap[product.category],
+        },
+      });
+    }
+
+    console.log("Products created successfully");
+  } catch (error) {
+    console.error("Seed failed", error);
+  } finally {
+    await prisma.$disconnect();
   }
 };
 
-seed()
-  .then(() => {
-    console.log("Seed completed successfully");
-  })
-  .catch((error) => {
-    console.error("Seed failed", error);
-  })
-  .finally(async () => {
-    await prisma.$disconnect();
-  });
+seed();
