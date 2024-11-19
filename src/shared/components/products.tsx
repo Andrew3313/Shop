@@ -16,18 +16,18 @@ export const Products: React.FC = async () => {
       {categories.map((category) => (
         <div
           key={category.id}
-          className="w-full backdrop-blur-md bg-black/30 mb-[4rem]"
+          className="mb-[4rem] w-full bg-black/30 backdrop-blur-md"
         >
           <Accordion type="multiple" defaultValue={[`category-${category.id}`]}>
             <AccordionItem
               value={`category-${category.id}`}
               className="border-none"
             >
-              <AccordionTrigger className="category-name font-revalia text-5xl hover:no-underline p-8">
+              <AccordionTrigger className="p-8 font-revalia text-5xl hover:no-underline">
                 {category.name}
               </AccordionTrigger>
               <AccordionContent>
-                <div className="grid grid-cols-2 sm:grid-cols-1 gap-6 py-4">
+                <div className="grid grid-cols-2 gap-6 py-4 sm:grid-cols-1">
                   {category.products.map((product) => (
                     <Product key={product.article} product={product} />
                   ))}

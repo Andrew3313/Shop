@@ -7,14 +7,14 @@ export const metadata = {
 export default function Delivery() {
   return (
     <div className="mb-[4rem]">
-      <Container className="backdrop-blur-md bg-black/30 px-10 pt-10 font-palanquin h-full">
+      <Container className="h-full bg-black/30 px-10 pt-10 font-palanquin backdrop-blur-md">
         <div className="w-full p-14">
-          <h1 className="text-4xl font-revalia select-none">
+          <h1 className="select-none font-revalia text-4xl">
             Доставка и оплата
           </h1>
           <div className="p-14 font-palanquin">
-            <p className="text-8xl mb-14 select-none leading-relaxed">Оплата</p>
-            <ul className="text-4xl leading-normal flex flex-col gap-10">
+            <p className="mb-14 select-none text-8xl leading-relaxed">Оплата</p>
+            <ul className="flex flex-col gap-10 text-4xl leading-normal">
               <li>
                 Оплата за товары производится только безналичным расчетом.
               </li>
@@ -23,10 +23,10 @@ export default function Delivery() {
           </div>
 
           <div className="px-14 pb-14 font-palanquin">
-            <p className="text-8xl mb-14 select-none leading-relaxed">
+            <p className="mb-14 select-none text-8xl leading-relaxed">
               Доставка
             </p>
-            <ul className="text-4xl leading-normal flex flex-col gap-10">
+            <ul className="flex flex-col gap-10 text-4xl leading-normal">
               <li>
                 Доставка осуществляется с помощью сторонних сервисов, таких как
                 CDEK и Яндекс Доставка. Доставка оформляется через сайт Avito.

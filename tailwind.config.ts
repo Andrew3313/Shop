@@ -17,10 +17,8 @@ const config = {
       },
     },
     screens: {
-      // xl: { max: "1200px" },
       lg: { max: "992px" },
       md: { max: "768px" },
-      // sm: { max: "640px" },
       sm: { max: "375px" },
       xs: { max: "320px" },
     },

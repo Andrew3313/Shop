@@ -15,12 +15,18 @@ export const CartButton: React.FC<IProps> = ({ className }) => {
   return (
     <button
       className={cn(
-        "hover:opacity-75 transition-opacity duration-200",
-        className
+        "transition-opacity duration-200 hover:opacity-75",
+        className,
       )}
       onClick={() => router.push("/cart")}
     >
-      <Image className="cart-button-image" src="/assets/images/cart.svg" alt="Cart" width={27} height={27} />
+      <Image
+        className="cart-button-image"
+        src="/assets/images/cart.svg"
+        alt="Cart"
+        width={27}
+        height={27}
+      />
     </button>
   );
 };

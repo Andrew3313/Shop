@@ -7,11 +7,13 @@ export const metadata = {
 export default function Contacts() {
   return (
     <div className="mb-[4rem]">
-      <Container className="backdrop-blur-md bg-black/30 px-10 pt-10 font-palanquin h-full">
+      <Container className="h-full bg-black/30 px-10 pt-10 font-palanquin backdrop-blur-md">
         <div className="w-full p-14">
-          <h1 className="text-4xl font-revalia select-none">Контакты</h1>
+          <h1 className="select-none font-revalia text-4xl">Контакты</h1>
           <div className="p-14 font-palanquin">
-            <p className="text-8xl mb-14 select-none leading-relaxed">Наша команда</p>
+            <p className="mb-14 select-none text-8xl leading-relaxed">
+              Наша команда
+            </p>
             <p className="text-4xl leading-normal">
               По всем вопросам сюда — swaggaholix | тг — https://t.me/exrthangel{" "}
               <br />

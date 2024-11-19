@@ -16,9 +16,10 @@ export interface IProduct {
 
 interface IProps {
   product: IProduct;
+  key: number;
 }
 
-export const Product: React.FC<IProps> = ({ product }) => {
+export const Product: React.FC<IProps> = ({ product, key }) => {
   const addItem = useCartStore((state) => state.addItem);
 
   const handleAddToCart = () => {
@@ -32,16 +33,14 @@ export const Product: React.FC<IProps> = ({ product }) => {
   };
 
   return (
-    <Card className="bg-transparent text-white border-none">
+    <Card key={key} className="border-none bg-transparent text-white">
       <CardContent className="p-4">
-        <h3 className="product-name text-4xl pl-5 select-none">
-          {product.name}
-        </h3>
+        <h3 className="select-none pl-5 text-4xl">{product.name}</h3>
         <div className="flex justify-center">
           <Image
             src={product.imagePath}
             alt={product.name}
-            className="product-image w-full h-auto aspect-square object-contain mb-4"
+            className="mb-4 aspect-square h-auto w-full object-contain"
             width={310}
             height={260}
           />
@@ -50,7 +49,7 @@ export const Product: React.FC<IProps> = ({ product }) => {
       <CardFooter>
         <Button
           onClick={handleAddToCart}
-          className="add-to-cart flex justify-between items-center w-full text-3xl p-14 border-[.1rem] border-white bg-transparent hover:bg-black/30 active:translate-y-1 transition-transform"
+          className="flex w-full items-center justify-between border-[.1rem] border-white bg-transparent p-14 text-3xl transition-transform hover:bg-black/30 active:translate-y-1"
         >
           <h3>добавить в корзину</h3>
           <p>{product.price} ₽</p>

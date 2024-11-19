@@ -11,8 +11,8 @@ interface Props {
 
 export const Header: React.FC<Props> = ({ className }) => {
   return (
-    <header className={cn("pt-14 text-white mb-[4rem]", className)}>
-      <Container className="flex items-center justify-center backdrop-blur-md bg-black/30 border-[.1rem] border-white">
+    <header className={cn("mb-[4rem] pt-14 text-white", className)}>
+      <Container className="flex items-center justify-center border-[.1rem] border-white bg-black/30 backdrop-blur-md">
         <Link href="/">
           <Image
             src="/logo.svg"
@@ -29,5 +29,3 @@ export const Header: React.FC<Props> = ({ className }) => {
     </header>
   );
 };
-
-

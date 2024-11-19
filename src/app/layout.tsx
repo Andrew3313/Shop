@@ -30,8 +30,8 @@ export default function RootLayout({
     <html lang="ru">
       <body
         className={cn(
-          "bg-background h-screen bg-cover bg-center bg-fixed bg-no-repeat text-white",
-          `${quicksand.variable} ${revalia.variable} ${palanquin.variable}`
+          "h-screen bg-background bg-cover bg-fixed bg-center bg-no-repeat text-white",
+          `${quicksand.variable} ${revalia.variable} ${palanquin.variable}`,
         )}
       >
         <Providers>{children}</Providers>

@@ -6,8 +6,8 @@ export const metadata = {
 
 export default function UserAgreement() {
   return (
-    <Container className="backdrop-blur-md bg-black/30 p-10 mb-[4rem] font-palanquin">
-      <h1 className="text-4xl text-center mb-10">
+    <Container className="mb-[4rem] bg-black/30 p-10 font-palanquin backdrop-blur-md">
+      <h1 className="mb-10 text-center text-4xl">
         Пользовательское соглашение
       </h1>
 

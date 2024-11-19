@@ -56,17 +56,17 @@ body {
   }
 
   .cart-button {
-    @apply top-[6rem] right-[6rem];
+    @apply right-[6rem] top-[6rem];
   }
 }
 
 @media screen and (max-width: 1200px) {
   html {
     font-size: 50%;
-  } 
+  }
 
   .cart-button {
-    @apply top-[6.5rem] right-[6.5rem];
+    @apply right-[6.5rem] top-[6.5rem];
   }
 }
 
@@ -76,12 +76,11 @@ body {
   }
 
   .cart-button {
-    @apply top-[7rem] right-[7rem];
+    @apply right-[7rem] top-[7rem];
   }
 }
 
 @media screen and (max-width: 768px) {
-
 }
 
 @media screen and (max-width: 593px) {
@@ -90,7 +89,7 @@ body {
   }
 
   .cart-button {
-    @apply top-[8rem] right-[8rem];
+    @apply right-[8rem] top-[8rem];
   }
 }
 
@@ -100,15 +99,15 @@ body {
   }
 
   .logo {
-    @apply w-[225px] h-[100px];
+    @apply h-[100px] w-[225px];
   }
 
   .cart-button-image {
-    @apply w-[20px] h-[20px];
+    @apply h-[20px] w-[20px];
   }
 
   .cart-button {
-    @apply top-[7rem] right-[7rem];
+    @apply right-[7rem] top-[7rem];
   }
 }
 
@@ -118,23 +117,23 @@ body {
   }
 
   .cart-button {
-    @apply top-[7.5rem] right-[7.5rem];
+    @apply right-[7.5rem] top-[7.5rem];
   }
 }
 
 @media screen and (max-width: 400px) {
   .logo {
-    @apply w-[200px] h-[75px];
+    @apply h-[75px] w-[200px];
   }
 
   .cart-button-image {
-    @apply w-[18px] h-[18px];
+    @apply h-[18px] w-[18px];
   }
 
   .cart-button {
-    @apply top-[5rem] right-[5rem];
+    @apply right-[5rem] top-[5rem];
   }
-} 
+}
 
 @media screen and (max-width: 320px) {
   html {
@@ -142,6 +141,6 @@ body {
   }
 
   .cart-button {
-    @apply top-[5.5rem] right-[5.5rem];
+    @apply right-[5.5rem] top-[5.5rem];
   }
 }
