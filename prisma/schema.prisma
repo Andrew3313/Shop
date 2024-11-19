@@ -29,3 +29,4 @@ model Product {
 // npx prisma studio
 // npx prisma generate
 
+// "prisma-seed": "tsx prisma/seed.ts"
