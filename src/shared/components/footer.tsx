@@ -5,7 +5,7 @@ import Link from "next/link";
 export const Footer: React.FC = () => {
   return (
     <footer>
-      <Container className="footer text-2xl flex items-center justify-between p-9 backdrop-blur-md bg-black/30">
+      <Container className="text-2xl flex items-center justify-around p-2 backdrop-blur-md bg-black/30">
         <p className="select-none">© 2024 WWW.TLWND.ONLINE</p>
         <Link
           href="/user-agreement"

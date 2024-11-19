@@ -6,7 +6,7 @@ export const metadata = {
 
 export default function Delivery() {
   return (
-    <div className="min-h-[calc(100vh-27rem-4rem)] mb-[4rem]">
+    <div className="mb-[4rem]">
       <Container className="backdrop-blur-md bg-black/30 px-10 pt-10 font-palanquin h-full">
         <div className="w-full p-14">
           <h1 className="text-4xl font-revalia select-none">

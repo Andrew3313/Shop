@@ -56,10 +56,10 @@ export default function Cart() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-27rem-4rem)] mb-[4rem]">
+    <div className="mb-[4rem]">
       <Container className="backdrop-blur-md bg-black/30 px-10 pt-10 font-palanquin h-full">
-        <div className="w-full p-14">
-          <h1 className="text-4xl font-revalia select-none">Корзина товаров</h1>
+        <div className="w-full p-14 select-none">
+          <h1 className="text-4xl font-revalia">Корзина товаров</h1>
           {items.length === 0 ? (
             <div className="mt-10 flex items-center justify-center">
               <Image
@@ -75,48 +75,49 @@ export default function Cart() {
               <div className="space-y-6">
                 {items.map((item) => (
                   <div
-                    key={item.article}
-                    className="flex items-center justify-between border-b border-gray-700 pb-4"
-                  >
-                    <div className="flex items-center text-4xl">
-                      <Image
-                        src={item.imagePath}
-                        alt={item.name}
-                        width={200}
-                        height={200}
-                        className="rounded"
-                      />
-                      <div>
-                        <p className="mb-4">{item.name}</p>
-                        <p className="text-gray-400">{item.price} ₽ за штуку</p>
-                      </div>
+                  key={item.article}
+                  className="grid grid-cols-[auto_auto_auto] gap-x-8 items-center border-b border-gray-700 pb-8"
+                >
+                  <div className="flex items-center text-4xl">
+                    <Image
+                      src={item.imagePath}
+                      alt={item.name}
+                      width={200}
+                      height={200}
+                      className="md:w-[130px] md:h-[130px] sm:w-[90px] sm:h-[90px] xs:w-[50px] xs:h-[50px]"
+                    />
+                    <div>
+                      <p className="mb-4">{item.name}</p>
+                      <p className="text-gray-400">{item.price} ₽ за штуку</p>
                     </div>
-
-                    <div className="flex text-4xl items-center gap-6">
-                      <button
-                        onClick={() => handleQuantityDecrease(item.article)}
-                        className="w-12 h-12 flex items-center justify-center"
-                      >
-                        -
-                      </button>
-                      <p className="select-none">{item.quantity}</p>
-                      <button
-                        onClick={() => handleQuantityIncrease(item.article)}
-                        className="w-12 h-12 flex items-center justify-center"
-                      >
-                        +
-                      </button>
-                    </div>
-
-                    <p className="text-4xl">{item.price * item.quantity} ₽</p>
-
+                  </div>
+                
+                  <div className="flex justify-center text-4xl items-center gap-6">
                     <button
-                      className="p-6 text-4xl border-[.1rem] border-white hover:bg-black/30 active:translate-y-1 transition-transform"
-                      onClick={() => handleRemoveItem(item.article)}
+                      onClick={() => handleQuantityDecrease(item.article)}
+                      className="w-12 h-12 flex items-center justify-center"
                     >
-                      Удалить
+                      -
+                    </button>
+                    <p className="select-none">{item.quantity}</p>
+                    <button
+                      onClick={() => handleQuantityIncrease(item.article)}
+                      className="w-12 h-12 flex items-center justify-center"
+                    >
+                      +
                     </button>
                   </div>
+                
+                  <p className="text-4xl text-center">{item.price * item.quantity} ₽</p>
+                
+                  <button
+                    className="p-4 rounded text-4xl border-[.1rem] border-white hover:bg-black/30 active:translate-y-1 transition-transform col-start-3 row-start-2 justify-self-center"
+                    onClick={() => handleRemoveItem(item.article)}
+                  >
+                    Удалить
+                  </button>
+                </div>
+                
                 ))}
               </div>
               <div className="mt-10 text-4xl flex justify-between items-center">

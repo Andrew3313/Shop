@@ -27,7 +27,7 @@ export const Products: React.FC = async () => {
                 {category.name}
               </AccordionTrigger>
               <AccordionContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
+                <div className="grid grid-cols-2 sm:grid-cols-1 gap-6 py-4">
                   {category.products.map((product) => (
                     <Product key={product.article} product={product} />
                   ))}

@@ -46,7 +46,7 @@ body {
 
 @media screen and (max-width: 1800px) {
   html {
-    font-size: 60%;
+    font-size: 59%;
   }
 }
 
@@ -55,156 +55,48 @@ body {
     font-size: 55%;
   }
 
-  .main-container {
-    @apply min-h-[calc(100vh-39rem)];
+  .cart-button {
+    @apply top-[6rem] right-[6rem];
   }
 }
 
 @media screen and (max-width: 1200px) {
   html {
     font-size: 50%;
-  }
+  } 
 
   .cart-button {
-    @apply top-[6rem] right-[6rem];
-  }
-
-  .main-container {
-    @apply min-h-[calc(100vh-41rem)];
+    @apply top-[6.5rem] right-[6.5rem];
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 855px) {
+  html {
+    font-size: 45%;
+  }
+
+  .cart-button {
+    @apply top-[7rem] right-[7rem];
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 593px) {
   html {
     font-size: 40%;
-  }
-
-  .navigation {
-    @apply text-4xl;
-  }
-
-  .product-name {
-    @apply text-4xl;
-  }
-
-  .category-name {
-    @apply text-5xl;
-  }
-
-  .cart-button {
-    @apply top-[7.5rem] right-[7.5rem];
-  }
-
-  .add-to-cart {
-    @apply text-4xl;
-  }
-
-  .footer {
-    @apply text-3xl;
-  }
-
-  .main-container {
-    @apply min-h-[calc(100vh-45rem)];
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .product-image {
-    @apply w-[300px] h-[250px];
-  }
-
-  .card-content {
-    @apply flex justify-center;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .cart-button {
-    @apply top-[7.7rem] right-[7.7rem];
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .product-name {
-    @apply text-5xl;
-  }
-
-  .add-to-cart {
-    @apply text-5xl;
-  }
-}
-
-@media screen and (max-width: 690px) {
-  html {
-    font-size: 38%;
   }
 
   .cart-button {
     @apply top-[8rem] right-[8rem];
   }
-
-  .main-container {
-    @apply min-h-[calc(100vh-46rem)];
-  }
 }
 
-@media screen and (max-width: 655px) {
+@media screen and (max-width: 530px) {
   html {
     font-size: 35%;
-  }
-
-  .cart-button {
-    @apply top-[8.3rem] right-[8.3rem];
-  }
-
-  .main-container {
-    @apply min-h-[calc(100vh-47rem)];
-  }
-}
-
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 33%;
-  }
-
-  .cart-button {
-    @apply top-[8.6rem] right-[8.6rem];
-  }
-
-  .user-agreement-title {
-    @apply text-5xl;
-  }
-
-  .user-agreement {
-    @apply text-4xl;
-  }
-
-  .main-container {
-    @apply min-h-[calc(100vh-49rem)];
-  }
-}
-
-@media screen and (max-width: 570px) {
-  html {
-    font-size: 30%;
-  }
-
-  .cart-button {
-    @apply top-[9.2rem] right-[9.2rem];
-  }
-
-  .main-container {
-    @apply min-h-[calc(100vh-52rem)];
-  }
-}
-
-@media screen and (max-width: 510px) {
-  html {
-    font-size: 27%;
-  }
-
-  .cart-button {
-    @apply top-[9rem] right-[9rem];
   }
 
   .logo {
@@ -212,67 +104,25 @@ body {
   }
 
   .cart-button-image {
-    @apply w-[25px] h-[25px];
-  }
-
-  .main-container {
-    @apply min-h-[calc(100vh-48rem)];
-  }
-}
-
-@media screen and (max-width: 465px) {
-  html {
-    font-size: 25%;
-  }
-
-  .cart-button-image {
-    @apply w-[23px] h-[23px];
-  }
-
-  .main-container {
-    @apply min-h-[calc(100vh-50rem)];
-  }
-}
-
-@media screen and (max-width: 430px) {
-  html {
-    font-size: 22%;
-  }
-
-  .cart-button-image {
     @apply w-[20px] h-[20px];
   }
 
   .cart-button {
-    @apply top-[9.5rem] right-[9.5rem];
-  }
-
-  .footer {
-    @apply text-4xl;
-  }
-
-  .user-agreement-container {
-    @apply min-h-[calc(100vh-54rem)];
-  }
-
-  .main-container {
-    @apply min-h-[calc(100vh-53rem)];
+    @apply top-[7rem] right-[7rem];
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 415px) {
   html {
-    font-size: 19%;
-  }
-
-  .cart-button-image {
-    @apply w-[18px] h-[18px];
+    font-size: 32%;
   }
 
   .cart-button {
-    @apply top-[9.5rem] right-[9.5rem];
+    @apply top-[7.5rem] right-[7.5rem];
   }
+}
 
+@media screen and (max-width: 400px) {
   .logo {
     @apply w-[200px] h-[75px];
   }
@@ -281,23 +131,17 @@ body {
     @apply w-[18px] h-[18px];
   }
 
-  .navigation {
-    @apply text-5xl;
+  .cart-button {
+    @apply top-[5rem] right-[5rem];
+  }
+} 
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 30%;
   }
 
-  .category-name {
-    @apply text-7xl;
-  }
-
-  .add-to-cart {
-    @apply text-7xl;
-  }
-
-  .user-agreement-container {
-    @apply min-h-[calc(100vh-51rem)];
-  }
-
-  .main-container {
-    @apply min-h-[calc(100vh-51rem)];
+  .cart-button {
+    @apply top-[5.5rem] right-[5.5rem];
   }
 }

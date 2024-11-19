@@ -34,16 +34,16 @@ export const Product: React.FC<IProps> = ({ product }) => {
   return (
     <Card className="bg-transparent text-white border-none">
       <CardContent className="p-4">
-        <h3 className="product-name text-3xl pl-5 select-none">
+        <h3 className="product-name text-4xl pl-5 select-none">
           {product.name}
         </h3>
-        <div className="card-content">
+        <div className="flex justify-center">
           <Image
             src={product.imagePath}
             alt={product.name}
-            className="product-image w-full h-auto aspect-square object-cover mb-4"
-            width={350}
-            height={300}
+            className="product-image w-full h-auto aspect-square object-contain mb-4"
+            width={310}
+            height={260}
           />
         </div>
       </CardContent>
