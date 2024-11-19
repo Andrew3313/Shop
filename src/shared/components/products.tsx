@@ -6,13 +6,11 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import { Product } from "./product";
-import { getCategoriesWithProducts } from "@/app/actions";
+import { TCategories } from "../types";
 
-export const revalidate = 10800;
-
-export const Products: React.FC = async () => {
-  const categories = await getCategoriesWithProducts();
-
+export const Products: React.FC<{ categories: TCategories }> = ({
+  categories,
+}) => {
   return (
     <main>
       {categories.map((category) => (
