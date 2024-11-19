@@ -8,6 +8,8 @@ import {
 import { Product } from "./product";
 import { getCategoriesWithProducts } from "@/app/actions";
 
+export const revalidate = 10800;
+
 export const Products: React.FC = async () => {
   const categories = await getCategoriesWithProducts();
 
