@@ -23,7 +23,7 @@ export const Products: React.FC<{ categories: TCategories }> = ({
               value={`category-${category.id}`}
               className="border-none"
             >
-              <AccordionTrigger className="p-8 font-revalia text-5xl hover:no-underline md:text-[3.5rem]">
+              <AccordionTrigger className="flex items-center p-8 font-revalia text-5xl hover:no-underline md:text-[3.5rem]">
                 {category.name}
               </AccordionTrigger>
               <AccordionContent>
