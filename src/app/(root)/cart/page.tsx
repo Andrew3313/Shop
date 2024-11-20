@@ -55,11 +55,9 @@ export default function Cart() {
 
     const telegramUserName = "Andy131265";
 
-    const telegramLink = `https://t.me/${telegramUserName}?text=${encodeURIComponent(
-      orderMessage,
-    )}`;
+    const telegramLink = `tg://resolve?domain=${telegramUserName}&text=${encodeURIComponent(orderMessage)}`;
 
-    window.location.href = telegramLink;
+    window.open(telegramLink, "_self");
   };
 
   return (
