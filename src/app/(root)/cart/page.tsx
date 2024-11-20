@@ -59,7 +59,7 @@ export default function Cart() {
 
     const fallbackLink = `https://t.me/${telegramUserName}?text=${encodeURIComponent(orderMessage)}`;
 
-    window.open(fallbackLink, "_self");
+    window.open(fallbackLink, "_blank");
   };
 
   return (
