@@ -57,7 +57,7 @@ export default function Cart() {
 
     const telegramLink = `tg://resolve?domain=${telegramUserName}&text=${encodeURIComponent(orderMessage)}`;
 
-    window.location.href = telegramLink;
+    window.open(telegramLink, "_blank");
   };
 
   return (
