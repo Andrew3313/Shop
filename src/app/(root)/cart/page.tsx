@@ -43,7 +43,7 @@ export default function Cart() {
           `${item.name} x${item.quantity} - ${item.price * item.quantity} ₽`,
       )
       .join("\n");
-    return `Здравствуйте, я хочу заказать:\n${message}\n\nИтого: ${totalAmount} ₽`;
+    return `Здравствуйте, мой заказ:\n${message}\n\nИтого: ${totalAmount} ₽`;
   };
 
   const handleOrder = () => {
@@ -51,7 +51,7 @@ export default function Cart() {
 
     clearCart();
 
-    toast("Спасибо за заказ! Вы будете перенаправлены в чат с проодавцом.");
+    toast("Спасибо за заказ! Вы будете перенаправлены в чат с продавцом.");
 
     const telegramUserName = "Andy131265";
 
