@@ -51,7 +51,7 @@ export default function Cart() {
 
     clearCart();
 
-    toast("Спасибо за заказ!");
+    toast("Спасибо за заказ! Вы будете перенаправлены в чат с проодавцом.");
 
     const telegramUserName = "Andy131265";
 
@@ -59,7 +59,7 @@ export default function Cart() {
       orderMessage,
     )}`;
 
-    window.location.href = telegramLink;
+    window.open(telegramLink, "_self");
   };
 
   return (
