@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Card, CardContent, CardFooter } from "./ui/card";
 import { Button } from "./ui/button";
 import { useCartStore } from "../store/cart";
-import { toast } from "react-hot-toast";
+import { toast } from "react-toastify";
 
 export interface IProduct {
   name: string;
@@ -29,7 +29,24 @@ export const Product: React.FC<IProps> = ({ product, key }) => {
       price: product.price,
       imagePath: product.imagePath,
     });
-    toast.success("Товар добавлен в корзину");
+    toast.success("Товар добавлен в корзину", {
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+          stroke="white"
+          style={{ width: "2rem", height: "2rem" }}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M5 13l4 4L19 7"
+          />
+        </svg>
+      ),
+    });
   };
 
   return (

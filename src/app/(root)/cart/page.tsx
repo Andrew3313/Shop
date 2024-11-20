@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Container } from "@/shared/components";
 import { useCartStore } from "@/shared/store/cart";
 import Image from "next/image";
-import { toast } from "react-hot-toast";
+import { toast } from "react-toastify";
 
 export default function Cart() {
   const { items, totalAmount, updateItemQuantity, removeItem, clearCart } =
