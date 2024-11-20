@@ -17,6 +17,7 @@ export const Providers: React.FC<React.PropsWithChildren> = ({ children }) => {
           background: "rgba(0, 0, 0, 0.6)",
           color: "white",
           textAlign: "center",
+          backdropFilter: "blur(.7rem)",
         }}
         position="bottom-right"
         autoClose={3000}
