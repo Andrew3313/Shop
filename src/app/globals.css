@@ -111,17 +111,21 @@ body {
   }
 }
 
-@media screen and (max-width: 415px) {
+/* @media screen and (max-width: 415px) {
   html {
-    font-size: 32%;
+    font-size: 33%;
   }
 
   .cart-button {
     @apply right-[7.5rem] top-[7.5rem];
   }
-}
+} */
 
 @media screen and (max-width: 400px) {
+  html {
+    font-size: 33%;
+  }
+
   .logo {
     @apply h-[75px] w-[200px];
   }
@@ -137,11 +141,21 @@ body {
 
 @media screen and (max-width: 320px) {
   html {
-    font-size: 30%;
+    font-size: 31%;
   }
 
   .cart-button {
     @apply right-[5.5rem] top-[5.5rem];
+  }
+}
+
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 28%;
+  }
+
+  .cart-button {
+    @apply right-[6rem] top-[6rem];
   }
 }
 

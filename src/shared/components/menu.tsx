@@ -18,7 +18,7 @@ export const Menu: React.FC = () => {
   return (
     <nav className="mb-[4rem]">
       <Container className="px-20 md:px-10">
-        <ul className="flex select-none items-center justify-around bg-black/30 py-8 text-3xl backdrop-blur-md md:text-[2.3rem] xs:text-[2rem]">
+        <ul className="flex select-none items-center justify-around bg-black/30 py-8 text-3xl backdrop-blur-md md:text-[2.3rem] xs:text-[2.1rem]">
           <li>
             <Link href="/" className={getLinkClass("/")}>
               Главная страница

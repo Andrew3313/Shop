@@ -7,11 +7,11 @@ export const metadata = {
 export default function UserAgreement() {
   return (
     <Container className="mb-[4rem] bg-black/30 p-10 font-palanquin backdrop-blur-md">
-      <h1 className="mb-10 text-center text-4xl">
+      <h1 className="mb-10 text-center text-5xl">
         Пользовательское соглашение
       </h1>
 
-      <div className="text-justify text-3xl leading-relaxed">
+      <div className="text-justify text-4xl leading-relaxed">
         <section className="mb-10">
           <h2 className="mb-2">1. Общие положения</h2>
           <p className="mb-2">

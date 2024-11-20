@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Container } from "@/shared/components";
 import { useCartStore } from "@/shared/store/cart";
 import Image from "next/image";
-import { toast } from "sonner";
+import { toast } from "react-hot-toast";
 
 export default function Cart() {
   const { items, totalAmount, updateItemQuantity, removeItem, clearCart } =
@@ -66,7 +66,7 @@ export default function Cart() {
     <div className="mb-[4rem]">
       <Container className="h-full bg-black/30 px-10 pt-10 font-palanquin backdrop-blur-md">
         <div className="w-full select-none p-14">
-          <h1 className="font-revalia text-4xl">Корзина товаров</h1>
+          <h1 className="font-revalia text-5xl">Корзина товаров</h1>
           <div className="mt-10 flex min-h-[31.5rem] items-center justify-center">
             {!isMounted ? (
               <div className="loader" />
@@ -134,7 +134,7 @@ export default function Cart() {
                     </div>
                   ))}
                 </div>
-                <div className="mt-10 flex items-center justify-between text-4xl">
+                <div className="mt-10 flex items-center justify-between text-5xl">
                   <p>Итого: {totalAmount} ₽</p>
                   <button
                     onClick={handleOrder}

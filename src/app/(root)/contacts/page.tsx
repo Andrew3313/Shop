@@ -9,7 +9,7 @@ export default function Contacts() {
     <div className="mb-[4rem]">
       <Container className="h-full bg-black/30 px-10 pt-10 font-palanquin backdrop-blur-md">
         <div className="w-full p-14">
-          <h1 className="select-none font-revalia text-4xl">Контакты</h1>
+          <h1 className="select-none font-revalia text-5xl">Контакты</h1>
           <div className="p-14 font-palanquin">
             <p className="mb-14 select-none text-8xl leading-relaxed">
               Наша команда

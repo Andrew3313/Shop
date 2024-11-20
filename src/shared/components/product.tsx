@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Card, CardContent, CardFooter } from "./ui/card";
 import { Button } from "./ui/button";
 import { useCartStore } from "../store/cart";
-import { toast } from "sonner";
+import { toast } from "react-hot-toast";
 
 export interface IProduct {
   name: string;
@@ -35,12 +35,14 @@ export const Product: React.FC<IProps> = ({ product, key }) => {
   return (
     <Card key={key} className="border-none bg-transparent text-white">
       <CardContent className="p-4">
-        <h3 className="select-none pl-5 text-4xl">{product.name}</h3>
+        <h3 className="select-none pl-5 text-4xl sm:text-[2.5rem]">
+          {product.name}
+        </h3>
         <div className="flex justify-center">
           <Image
             src={product.imagePath}
             alt={product.name}
-            className="mb-4 aspect-square h-auto w-full object-contain"
+            className="mb-4 aspect-square h-auto w-full object-contain sm:h-2/3 sm:w-2/3"
             width={310}
             height={260}
           />
@@ -49,7 +51,7 @@ export const Product: React.FC<IProps> = ({ product, key }) => {
       <CardFooter>
         <Button
           onClick={handleAddToCart}
-          className="flex w-full items-center justify-between border-[.1rem] border-white bg-transparent p-14 text-3xl transition-transform hover:bg-black/30 active:translate-y-1 md:text-[1.9rem]"
+          className="flex w-full items-center justify-between border-[.1rem] border-white bg-transparent p-14 text-3xl transition-transform hover:bg-black/30 active:translate-y-1 md:text-[1.8rem] sm:text-[2rem]"
         >
           <h3>добавить в корзину</h3>
           <p>{product.price} ₽</p>
