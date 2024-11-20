@@ -49,7 +49,7 @@ export const Product: React.FC<IProps> = ({ product, key }) => {
       <CardFooter>
         <Button
           onClick={handleAddToCart}
-          className="flex w-full items-center justify-between border-[.1rem] border-white bg-transparent p-14 text-3xl transition-transform hover:bg-black/30 active:translate-y-1"
+          className="flex w-full items-center justify-between border-[.1rem] border-white bg-transparent p-14 text-3xl transition-transform hover:bg-black/30 active:translate-y-1 md:text-[1.9rem]"
         >
           <h3>добавить в корзину</h3>
           <p>{product.price} ₽</p>

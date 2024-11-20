@@ -53,7 +53,7 @@ export default function Cart() {
 
     toast("Спасибо за заказ!");
 
-    const telegramUserName = "be_stay";
+    const telegramUserName = "Andy131265";
 
     const telegramLink = `https://t.me/${telegramUserName}?text=${encodeURIComponent(
       orderMessage,

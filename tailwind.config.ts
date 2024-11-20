@@ -20,7 +20,7 @@ const config = {
       lg: { max: "992px" },
       md: { max: "768px" },
       sm: { max: "375px" },
-      xs: { max: "320px" },
+      xs: { max: "325px" },
     },
     extend: {
       colors: {
