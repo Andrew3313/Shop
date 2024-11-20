@@ -51,17 +51,15 @@ export default function Cart() {
 
     clearCart();
 
-    toast("Спасибо за заказ! Вы будете перенаправлены в чат с продавцом.");
+    toast(
+      "Спасибо за заказ! Вы будете перенаправлены в telegram чат с продавцом. Если этого не произошло, отключите блокировку переадресации в настройках браузера или свяжитесь с продавцом лично.",
+    );
 
     const telegramUserName = "Andy131265";
 
-    const telegramLink = `tg://resolve?domain=${telegramUserName}&text=${encodeURIComponent(orderMessage)}`;
     const fallbackLink = `https://t.me/${telegramUserName}?text=${encodeURIComponent(orderMessage)}`;
 
-    window.open(telegramLink, "_blank");
-    setTimeout(() => {
-      window.open(fallbackLink, "_blank");
-    }, 1000);
+    window.open(fallbackLink, "_blank");
   };
 
   return (
