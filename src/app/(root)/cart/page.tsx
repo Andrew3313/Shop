@@ -59,7 +59,7 @@ export default function Cart() {
       orderMessage,
     )}`;
 
-    window.open(telegramLink, "_blank");
+    window.open(telegramLink, "_self");
   };
 
   return (
