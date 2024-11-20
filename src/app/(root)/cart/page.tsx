@@ -136,13 +136,12 @@ export default function Cart() {
                 </div>
                 <div className="mt-10 flex items-center justify-between text-4xl">
                   <p>Итого: {totalAmount} ₽</p>
-                  <a
-                    href="#"
+                  <button
                     onClick={handleOrder}
                     className="rounded border-[.1rem] border-white p-6 transition-transform hover:bg-black/30 active:translate-y-1"
                   >
                     Оформить заказ
-                  </a>
+                  </button>
                 </div>
               </div>
             )}
