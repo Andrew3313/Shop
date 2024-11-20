@@ -11,6 +11,7 @@ export const Providers: React.FC<React.PropsWithChildren> = ({ children }) => {
       <Toaster
         visibleToasts={1}
         toastOptions={{
+          duration: 5000,
           style: {
             color: "#fff",
             border: ".1rem solid #fff",

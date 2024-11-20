@@ -52,14 +52,14 @@ export default function Cart() {
     clearCart();
 
     toast(
-      "Спасибо за заказ! Вы будете перенаправлены в telegram чат с продавцом. Если этого не произошло, отключите блокировку переадресации в настройках браузера или свяжитесь с продавцом лично.",
+      "Спасибо за заказ! Вы будете перенаправлены в telegram чат для дальнейшего оформления. Если этого не произошло, отключите блокировку переадресации в настройках браузера или свяжитесь с продавцом лично.",
     );
 
     const telegramUserName = "Andy131265";
 
     const fallbackLink = `https://t.me/${telegramUserName}?text=${encodeURIComponent(orderMessage)}`;
 
-    window.open(fallbackLink, "_blank");
+    window.open(fallbackLink, "_self");
   };
 
   return (
