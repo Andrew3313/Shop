@@ -12,15 +12,12 @@ const config = {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
     },
     screens: {
       lg: { max: "992px" },
       md: { max: "768px" },
-      sm: { max: "400px" },
-      xs: { max: "340px" },
+      sm: { max: "410px" },
+      xs: { max: "345px" },
     },
     extend: {
       colors: {
@@ -59,7 +56,7 @@ const config = {
         },
       },
       backgroundImage: {
-        background: "url('/assets/images/bg.svg')",
+        background: "url('/assets/images/bg.png')",
       },
       fontFamily: {
         quicksand: ["var(--font-quicksand)", "sans-serif"],

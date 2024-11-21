@@ -98,7 +98,7 @@ export default function Cart() {
                           alt={item.name}
                           width={200}
                           height={200}
-                          className="md:h-[130px] md:w-[130px] sm:h-[90px] sm:w-[90px] xs:h-[50px] xs:w-[50px]"
+                          className="md:h-[110px] md:w-[110px] sm:h-[90px] sm:w-[90px] xs:h-[60px] xs:w-[60px]"
                         />
                         <div>
                           <p className="mb-4">{item.name}</p>
@@ -108,14 +108,14 @@ export default function Cart() {
                         </div>
                       </div>
 
-                      <div className="flex items-center justify-center gap-6 text-4xl">
+                      <div className="flex items-center justify-center gap-6 text-5xl">
                         <button
                           onClick={() => handleQuantityDecrease(item.article)}
                           className="flex h-12 w-12 items-center justify-center"
                         >
                           -
                         </button>
-                        <p className="select-none">{item.quantity}</p>
+                        <p className="select-none text-4xl">{item.quantity}</p>
                         <button
                           onClick={() => handleQuantityIncrease(item.article)}
                           className="flex h-12 w-12 items-center justify-center"
@@ -137,7 +137,7 @@ export default function Cart() {
                     </div>
                   ))}
                 </div>
-                <div className="mt-10 flex items-center justify-between text-5xl">
+                <div className="mt-10 flex items-center justify-between text-[2.5rem]">
                   <p>Итого: {totalAmount} ₽</p>
                   <button
                     onClick={handleOrder}

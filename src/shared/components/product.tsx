@@ -62,13 +62,14 @@ export const Product: React.FC<IProps> = ({ product, key }) => {
             className="mb-4 aspect-square h-auto w-full object-contain sm:h-2/3 sm:w-2/3"
             width={310}
             height={260}
+            priority={true}
           />
         </div>
       </CardContent>
       <CardFooter>
         <Button
           onClick={handleAddToCart}
-          className="flex w-full items-center justify-between border-[.1rem] border-white bg-transparent p-14 text-3xl transition-transform hover:bg-black/30 active:translate-y-1 md:text-[1.8rem] sm:text-[2rem]"
+          className="flex w-full items-center justify-between border-[.1rem] border-white bg-transparent p-14 text-3xl transition-transform hover:bg-black/30 active:translate-y-1 sm:text-[2.5rem]"
         >
           <h3>добавить в корзину</h3>
           <p>{product.price} ₽</p>
