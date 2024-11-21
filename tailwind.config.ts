@@ -56,7 +56,7 @@ const config = {
         },
       },
       backgroundImage: {
-        background: "url('/assets/images/bg.png')",
+        background: "url('/assets/images/bg.svg')",
       },
       fontFamily: {
         quicksand: ["var(--font-quicksand)", "sans-serif"],
