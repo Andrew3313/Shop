@@ -35,6 +35,7 @@ export const Product = ({ product, key }: IProps) => {
             width={310}
             height={260}
             priority={true}
+            placeholder="empty"
             onClick={() => {
               router.push(`/product/${product.article}`);
             }}
