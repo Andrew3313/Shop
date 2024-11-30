@@ -1,12 +1,32 @@
 import { Container } from "@/shared/components";
 import { prisma } from "@/shared/lib/prisma";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { AddButton } from "@/shared/components/add-button";
+import Image from "next/image";
 
 type ProductPageProps = {
   params: Promise<{ id: string }>;
 };
+
+export async function generateMetadata({ params }: ProductPageProps) {
+  const { id } = await params;
+
+  const product = await prisma.product.findFirst({
+    where: {
+      article: Number(id),
+    },
+  });
+
+  if (!product) {
+    return {
+      title: "Товар не найден",
+    };
+  }
+
+  return {
+    title: product.name,
+  };
+}
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { id } = await params;
@@ -36,7 +56,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 priority
                 className="justify-self-center"
               />
-              <p className="text-justify text-3xl leading-relaxed md:text-left">
+              <p className="text-justify text-4xl leading-relaxed md:text-left">
                 {product.description}
               </p>
             </div>
