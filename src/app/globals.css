@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 :root {
   --background: 0 0% 0%;
   --foreground: 222.2 84% 4.9%;
@@ -36,6 +42,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -110,16 +117,6 @@ body {
     @apply right-[7rem] top-[7rem];
   }
 }
-
-/* @media screen and (max-width: 415px) {
-  html {
-    font-size: 33%;
-  }
-
-  .cart-button {
-    @apply right-[7.5rem] top-[7.5rem];
-  }
-} */
 
 @media screen and (max-width: 400px) {
   html {

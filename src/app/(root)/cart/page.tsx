@@ -3,14 +3,15 @@
 import { useState, useEffect } from "react";
 import { Container } from "@/shared/components";
 import { useCartStore } from "@/shared/store/cart";
-import Image from "next/image";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Cart() {
   const { items, totalAmount, updateItemQuantity, removeItem, clearCart } =
     useCartStore();
-
   const [isMounted, setIsMounted] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     setIsMounted(true);
@@ -52,11 +53,13 @@ export default function Cart() {
     clearCart();
 
     toast(
-      "Спасибо за заказ! Вы будете перенаправлены в telegram чат для дальнейшего оформления. Если этого не произошло, попробуйте открыть сайт в другом браузере или свяжитесь с продавцом лично.",
+      "Спасибо за заказ! Вы будете перенаправлены в telegram чат для дальнейшего оформления. Если этого не произошло, свяжитесь с продавцом лично.",
       {
         autoClose: 5000,
       },
     );
+
+    router.push("/");
 
     const telegramUserName = "Andy131265";
 
@@ -76,7 +79,7 @@ export default function Cart() {
             ) : items.length === 0 ? (
               <div>
                 <Image
-                  src="/assets/images/cart.png"
+                  src="/assets/images/cart-empty.png"
                   alt="Empty cart"
                   width={300}
                   height={300}
@@ -99,6 +102,7 @@ export default function Cart() {
                           width={200}
                           height={200}
                           className="md:h-[110px] md:w-[110px] sm:h-[90px] sm:w-[90px] xs:h-[60px] xs:w-[60px]"
+                          priority={true}
                         />
                         <div>
                           <p className="mb-4">{item.name}</p>
